@@ -1,0 +1,5 @@
+karlton,suits,801005684,85,3.8
+susan,strong,801005685,90,4.0
+cat,dog,801005686,60,2.0
+chicken,cow,801005687,40,1.5
+worm,bird,801005688,20,1.0
