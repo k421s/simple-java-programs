@@ -1,2 +1,2 @@
-#simple hangman cli app
-reads from a file to get names
+# Hangman-Java
+Hangman written in java that pulls from text files for the guess word 
