@@ -1,0 +1,80 @@
+//imports just in case
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+public class Pile{
+
+	//parallel arrays for properties of pile
+	private int maxCards = 5;
+	private boolean[] faceUp;//face up if true 	
+	private Card[] pileArray;
+
+	//args constructor
+	public Pile(Card[] inCards){
+
+		//fill field with the incoming card pile args
+		//TODO check that the cards are copied correctly
+	}
+	//no args constructor
+	public Pile(){
+		this.faceUp = new boolean[maxCards];
+		this.PileArray = new Card[maxCards];
+	}
+
+	// add copy constructor for cards 
+	public void addCardFaceDown(Card Card){}
+
+	//adds card face up
+	public void addCardFaceUp(){}
+
+	//removes and returns the top face down card
+	public Card removeCard(){} 
+
+	//returns number of face down cards
+	public int getNumberOfFaceDown(){
+		int count = 0; //number of face down cards
+
+		//loop and sum face down cards
+		for(int i = 0; i < maxCards; i++){
+			if(!(faceUp[i])){			//if boolean at index is not true it's face up
+				count++;						//increment	
+			}
+		}
+		return count;						//return sum
+	}
+
+	//returns number of face up cards
+	public int getNumberOfFaceUp(){
+int count = 0; //number of face down cards
+		
+		//loop and sum face down cards
+		for(int i = 0; i < maxCards; i++){
+			if((faceUp[i])){			//if boolean array at index is true it's face up 
+				count++;						//increment
+			}
+		}
+		return count;						//return sum
+	}
+
+	//prints cards in pile; prints in two lines - one for face up and one for face down
+	public String toString(){
+		String pileOutput = "\nFace Up Cards: \n";
+
+		//loop through ant print face up cards 
+		for(int i = 0; i < maxCards; i++){
+			if((faceUp[i])){			//add to string if face up
+				pileOutput += pileArray[i].toString() + "\n";
+			}	
+		}
+
+		//loop through and print face down cards
+		pileOutput += "\n\nFace Down Cards: \n"
+		for(int i = 0; i < maxCards; i++){
+			if(!(faceUp[i])){			//add to string if face down
+				pileOutput += pileArray[i].toString() + "\n";
+			}
+		}
+	}
+
+}
